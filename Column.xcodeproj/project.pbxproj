@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F19C99022852B2900D21ABB /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C98F22852B2900D21ABB /* UIView+Nib.swift */; };
+		7F19C99322852C2000D21ABB /* BookingModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C99222852C2000D21ABB /* BookingModule.swift */; };
+		7F19C99522852C2C00D21ABB /* BookingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C99422852C2C00D21ABB /* BookingInteractor.swift */; };
+		7F19C99722852C3500D21ABB /* BookingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C99622852C3500D21ABB /* BookingPresenter.swift */; };
+		7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9A42285324700D21ABB /* BookingViewController.swift */; };
+		7F19C9A72285324700D21ABB /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F19C9A52285324700D21ABB /* BookingViewController.xib */; };
+		7F19C9A9228553FB00D21ABB /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9A8228553FB00D21ABB /* UIImage+Color.swift */; };
+		7F19C9B32285EBDD00D21ABB /* UIView+Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9B22285EBDD00D21ABB /* UIView+Constrain.swift */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
-		7FF9DE3B2285292E009886E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE3A2285292E009886E7 /* ViewController.swift */; };
-		7FF9DE3E2285292E009886E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE3C2285292E009886E7 /* Main.storyboard */; };
 		7FF9DE402285292F009886E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE3F2285292F009886E7 /* Assets.xcassets */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
 		7FF9DE4E22852930009886E7 /* ColumnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE4D22852930009886E7 /* ColumnTests.swift */; };
@@ -26,10 +32,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F19C98F22852B2900D21ABB /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		7F19C99222852C2000D21ABB /* BookingModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingModule.swift; sourceTree = "<group>"; };
+		7F19C99422852C2C00D21ABB /* BookingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInteractor.swift; sourceTree = "<group>"; };
+		7F19C99622852C3500D21ABB /* BookingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingPresenter.swift; sourceTree = "<group>"; };
+		7F19C9A42285324700D21ABB /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		7F19C9A52285324700D21ABB /* BookingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
+		7F19C9A8228553FB00D21ABB /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		7F19C9B22285EBDD00D21ABB /* UIView+Constrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constrain.swift"; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FF9DE3A2285292E009886E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FF9DE3D2285292E009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FF9DE3F2285292F009886E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FF9DE422285292F009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF9DE442285292F009886E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +68,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F19C98922852A5E00D21ABB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7FF9DE382285292E009886E7 /* AppDelegate.swift */,
+				7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7F19C98A22852A8000D21ABB /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				7F19C99122852BE400D21ABB /* Module */,
+			);
+			path = Booking;
+			sourceTree = "<group>";
+		};
+		7F19C98B22852AA700D21ABB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7F19C98C22852B0B00D21ABB /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7F19C98C22852B0B00D21ABB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F19C98F22852B2900D21ABB /* UIView+Nib.swift */,
+				7F19C9A8228553FB00D21ABB /* UIImage+Color.swift */,
+				7F19C9B22285EBDD00D21ABB /* UIView+Constrain.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F19C99122852BE400D21ABB /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7F19C99222852C2000D21ABB /* BookingModule.swift */,
+				7F19C99422852C2C00D21ABB /* BookingInteractor.swift */,
+				7F19C99622852C3500D21ABB /* BookingPresenter.swift */,
+				7F19C9A42285324700D21ABB /* BookingViewController.swift */,
+				7F19C9A52285324700D21ABB /* BookingViewController.xib */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		7FF9DE2C2285292E009886E7 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +136,11 @@
 		7FF9DE372285292E009886E7 /* Column */ = {
 			isa = PBXGroup;
 			children = (
-				7FF9DE382285292E009886E7 /* AppDelegate.swift */,
-				7FF9DE3A2285292E009886E7 /* ViewController.swift */,
-				7FF9DE3C2285292E009886E7 /* Main.storyboard */,
-				7FF9DE3F2285292F009886E7 /* Assets.xcassets */,
-				7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */,
 				7FF9DE442285292F009886E7 /* Info.plist */,
+				7FF9DE3F2285292F009886E7 /* Assets.xcassets */,
+				7F19C98B22852AA700D21ABB /* Core */,
+				7F19C98922852A5E00D21ABB /* Main */,
+				7F19C98A22852A8000D21ABB /* Booking */,
 			);
 			path = Column;
 			sourceTree = "<group>";
@@ -179,7 +237,7 @@
 			files = (
 				7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */,
 				7FF9DE402285292F009886E7 /* Assets.xcassets in Resources */,
-				7FF9DE3E2285292E009886E7 /* Main.storyboard in Resources */,
+				7F19C9A72285324700D21ABB /* BookingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FF9DE3B2285292E009886E7 /* ViewController.swift in Sources */,
+				7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */,
+				7F19C9B32285EBDD00D21ABB /* UIView+Constrain.swift in Sources */,
+				7F19C99322852C2000D21ABB /* BookingModule.swift in Sources */,
+				7F19C99722852C3500D21ABB /* BookingPresenter.swift in Sources */,
 				7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */,
+				7F19C99022852B2900D21ABB /* UIView+Nib.swift in Sources */,
+				7F19C9A9228553FB00D21ABB /* UIImage+Color.swift in Sources */,
+				7F19C99522852C2C00D21ABB /* BookingInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +285,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7FF9DE3C2285292E009886E7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FF9DE3D2285292E009886E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
