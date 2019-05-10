@@ -10,10 +10,12 @@ import UIKit
 
 class BookingViewController: UIViewController {
     weak var interactor: BookingInteractor?
+    private var datasource: BookingTableViewDatasource?
 
     @IBOutlet weak var headerContainer: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var resultsTableView: UITableView!
 
     /// Constraint from search bar top to the top of the safe area
     @IBOutlet weak var searchToContainerTop: NSLayoutConstraint!
@@ -21,8 +23,21 @@ class BookingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        showResults()
+    }
+
+    func showResults() {
+        let data = [
+            1,2,3,4,4,1,32,1,321,3,21,321,3,21,32,13,2,3,2,32,13,21,3
+        ]
+
+        datasource = BookingTableViewDatasource()
+        datasource?.businesses = data
+        datasource?.set(for: resultsTableView)
     }
 }
+
+// MARK: Fileprivates
 
 fileprivate extension BookingViewController {
     /// Expand the header to display the title and search bar
@@ -44,7 +59,14 @@ fileprivate extension BookingViewController {
     }
 }
 
+// MARK: Search bar delegate
+
 extension BookingViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let query = searchBar.text ?? ""
+        print(query)
+    }
+
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.setShowsCancelButton(true, animated: true)
         collapseHeader()
