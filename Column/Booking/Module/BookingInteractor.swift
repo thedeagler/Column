@@ -9,9 +9,11 @@
 import Foundation
 
 class BookingInteractor {
-    let presenter: BookingPresenter
+    private let presenter: BookingPresenter
+    private let service: BookingService
 
-    init(presenter: BookingPresenter) {
+    init(presenter: BookingPresenter, service: BookingService = BookingService()) {
         self.presenter = presenter
+        self.service = service
     }
 }
