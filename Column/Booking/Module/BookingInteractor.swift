@@ -10,10 +10,10 @@ import Foundation
 
 class BookingInteractor {
     private let presenter: BookingPresenter
-    private let service: BookingService
+    private let placesService: PlacesRequesting
 
-    init(presenter: BookingPresenter, service: BookingService = BookingService()) {
+    init(presenter: BookingPresenter, placesService: PlacesRequesting = GooglePlacesService()) {
         self.presenter = presenter
-        self.service = service
+        self.placesService = placesService
     }
 }

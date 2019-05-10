@@ -19,8 +19,9 @@
 		7F19C9BE2286024F00D21ABB /* BookingResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F19C9BC2286024F00D21ABB /* BookingResultTableViewCell.xib */; };
 		7F19C9C022860BA500D21ABB /* BookingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9BF22860BA500D21ABB /* BookingTableViewDatasource.swift */; };
 		7F19C9C6228616FC00D21ABB /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9C5228616FC00D21ABB /* Webservice.swift */; };
-		7F19C9C82286196300D21ABB /* BookingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9C72286196300D21ABB /* BookingService.swift */; };
-		7F19C9CB228619F000D21ABB /* BookingSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9CA228619F000D21ABB /* BookingSearchResult.swift */; };
+		7F19C9D12286227800D21ABB /* GooglePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D02286227800D21ABB /* GooglePlacesService.swift */; };
+		7F19C9D6228624EE00D21ABB /* PlacesRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */; };
+		7F19C9D82286253400D21ABB /* PlacesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
 		7FF9DE402285292F009886E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE3F2285292F009886E7 /* Assets.xcassets */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
@@ -50,10 +51,11 @@
 		7F19C9BC2286024F00D21ABB /* BookingResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingResultTableViewCell.xib; sourceTree = "<group>"; };
 		7F19C9BF22860BA500D21ABB /* BookingTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewDatasource.swift; sourceTree = "<group>"; };
 		7F19C9C5228616FC00D21ABB /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		7F19C9C72286196300D21ABB /* BookingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingService.swift; sourceTree = "<group>"; };
-		7F19C9CA228619F000D21ABB /* BookingSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSearchResult.swift; sourceTree = "<group>"; };
 		7F19C9CD22861E0500D21ABB /* secrets.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.example.xcconfig; sourceTree = "<group>"; };
 		7F19C9CF2286209700D21ABB /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
+		7F19C9D02286227800D21ABB /* GooglePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesService.swift; sourceTree = "<group>"; };
+		7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRequesting.swift; sourceTree = "<group>"; };
+		7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchResult.swift; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF9DE3F2285292F009886E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 		7F19C98A22852A8000D21ABB /* Booking */ = {
 			isa = PBXGroup;
 			children = (
-				7F19C9C9228619C800D21ABB /* Networking */,
 				7F19C9B6228601B300D21ABB /* Views */,
 				7F19C99122852BE400D21ABB /* Module */,
 				7F19C9BF22860BA500D21ABB /* BookingTableViewDatasource.swift */,
@@ -147,15 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7F19C9C5228616FC00D21ABB /* Webservice.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		7F19C9C9228619C800D21ABB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				7F19C9C72286196300D21ABB /* BookingService.swift */,
-				7F19C9CA228619F000D21ABB /* BookingSearchResult.swift */,
+				7F19C9D2228623EF00D21ABB /* Places */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -167,6 +160,16 @@
 				7F19C9CF2286209700D21ABB /* secrets.xcconfig */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		7F19C9D2228623EF00D21ABB /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */,
+				7F19C9D02286227800D21ABB /* GooglePlacesService.swift */,
+				7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */,
+			);
+			path = Places;
 			sourceTree = "<group>";
 		};
 		7FF9DE2C2285292E009886E7 = {
@@ -310,17 +313,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F19C9CB228619F000D21ABB /* BookingSearchResult.swift in Sources */,
 				7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */,
 				7F19C9B32285EBDD00D21ABB /* UIView+Constrain.swift in Sources */,
 				7F19C9C022860BA500D21ABB /* BookingTableViewDatasource.swift in Sources */,
 				7F19C9BD2286024F00D21ABB /* BookingResultTableViewCell.swift in Sources */,
 				7F19C9C6228616FC00D21ABB /* Webservice.swift in Sources */,
 				7F19C99322852C2000D21ABB /* BookingModule.swift in Sources */,
+				7F19C9D82286253400D21ABB /* PlacesSearchResult.swift in Sources */,
 				7F19C99722852C3500D21ABB /* BookingPresenter.swift in Sources */,
+				7F19C9D12286227800D21ABB /* GooglePlacesService.swift in Sources */,
 				7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */,
 				7F19C99022852B2900D21ABB /* UIView+Nib.swift in Sources */,
-				7F19C9C82286196300D21ABB /* BookingService.swift in Sources */,
+				7F19C9D6228624EE00D21ABB /* PlacesRequesting.swift in Sources */,
 				7F19C9A9228553FB00D21ABB /* UIImage+Color.swift in Sources */,
 				7F19C99522852C2C00D21ABB /* BookingInteractor.swift in Sources */,
 			);
@@ -474,6 +478,7 @@
 		};
 		7FF9DE5322852930009886E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F19C9CF2286209700D21ABB /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +497,7 @@
 		};
 		7FF9DE5422852930009886E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F19C9CF2286209700D21ABB /* secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
