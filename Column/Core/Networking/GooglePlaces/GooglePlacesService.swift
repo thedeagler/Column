@@ -51,7 +51,7 @@ struct GooglePlacesService {
             .adding([
                 Query.location.item(value: "40.785276,-73.9651827"),
                 Query.radius.item(value: "50000"),
-                Query.query.item(value: query),
+                Query.query.item(value: query)
             ])
             .url
 

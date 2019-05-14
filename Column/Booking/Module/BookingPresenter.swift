@@ -16,6 +16,12 @@ class BookingPresenter {
     weak var view: BookingViewController?
 
     func present(results: [GooglePlacesSearchResult]) {
+        guard !results.isEmpty else {
+            view?.showInstructionOverlay()
+            presentAlert(title: "No results", message: "Try a different query.")
+            return
+        }
+
         let places: [BookingResultViewModel] = results.map {
             let title = NSMutableAttributedString()
             var titleIcon: UIImage?
@@ -31,18 +37,30 @@ class BookingPresenter {
             let description = NSAttributedString(string: $0.address)
             return BookingResultViewModel.init(id: $0.placeId, title: title, titleIcon: titleIcon, description: description)
         }
-
+        
         view?.show(places: places)
     }
 
-    func prepare(internationalNumber: String) {
-        let number = internationalNumber
-            .replacingOccurrences(of: " ", with: "")
-        guard let url = URL(string: "tel://\(number)") else {
-            // handle error
+    func present(error: Error) {
+        presentAlert(title: "Whoops", message: error.localizedDescription)
+    }
+
+    func prepare(internationalNumber: String?, for placeId: String) {
+        guard let number = internationalNumber,
+            let url = URL(string: "tel://\(number.replacingOccurrences(of: " ", with: ""))") else {
+
+            view?.disableCalling(for: placeId)
+            presentAlert(title: "Whoops", message: "This location does not have a valid phone number. Please try another location.")
             return
         }
 
         view?.call(url: url)
+    }
+
+    func presentAlert(title: String? = nil, message: String) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Okie Dokie", style: .default, handler: nil)
+        controller.addAction(okAction)
+        view?.show(alert: controller)
     }
 }

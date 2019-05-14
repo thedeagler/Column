@@ -9,6 +9,7 @@
 import UIKit
 
 class BookingViewController: UIViewController {
+
     private let interactor: BookingInteractor
     private var datasource: BookingTableViewDatasource?
     /// Used to place phone calls
@@ -18,6 +19,8 @@ class BookingViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultsTableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var instructionOverlay: UIView!
 
     /// Constraint from search bar top to the top of the safe area
     @IBOutlet weak var searchToContainerTop: NSLayoutConstraint!
@@ -36,7 +39,15 @@ class BookingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        interactor.findPlaces(for: "hilton")
+        showInstructionOverlay()
+    }
+
+    func showInstructionOverlay() {
+        instructionOverlay.isHidden = false
+    }
+
+    func hideInstructionOverlay() {
+        instructionOverlay.isHidden = true
     }
 
     func show(places: [BookingResultViewModel]) {
@@ -44,12 +55,50 @@ class BookingViewController: UIViewController {
         datasource?.places = places
         datasource?.set(for: resultsTableView)
         datasource?.cellActionDelegate = self
+        hideInstructionOverlay()
+        hideLoading()
     }
 
     func call(url: URL) {
         if urlOpener.canOpenURL(url) {
             urlOpener.open(url, options: [:], completionHandler: nil)
         }
+    }
+
+    func show(alert: UIAlertController) {
+        hideLoading()
+        present(alert, animated: true, completion: nil)
+    }
+
+    func disableCalling(for placeId: String) {
+        guard let indexPath = datasource?.disableCalling(for: placeId) else { return }
+        resultsTableView.beginUpdates()
+        resultsTableView.reloadRows(at: [indexPath], with: .fade)
+        resultsTableView.endUpdates()
+    }
+
+    func showLoading() {
+        loadingView.isHidden = false
+    }
+
+    func hideLoading() {
+        loadingView.isHidden = true
+    }
+
+    /// Resets the header to the initial state, i.e. expanded, not first responder, no text, etc
+    func resetHeader() {
+        expandHeader()
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+
+    /// Resets the entire view back to its initial state
+    func resetView() {
+        resetHeader()
+        hideLoading()
+        show(places: [])
+        showInstructionOverlay()
     }
 }
 
@@ -81,6 +130,10 @@ extension BookingViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let query = searchBar.text ?? ""
         interactor.findPlaces(for: query)
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
+        hideInstructionOverlay()
+        showLoading()
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -89,11 +142,7 @@ extension BookingViewController: UISearchBarDelegate {
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        searchBar.setShowsCancelButton(false, animated: true)
-        show(places: [])
-        searchBar.text = nil
-        expandHeader()
+        resetView()
     }
 }
 

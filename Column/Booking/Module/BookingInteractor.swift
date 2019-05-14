@@ -14,10 +14,6 @@ class BookingInteractor {
     private let presenter: BookingPresenter
     private let placesService: GooglePlacesService
 
-    private struct Constants {
-        static let defaultGooglePlaceTypes: [GooglePlaceType] = [.carRental, .hotel]
-    }
-
     init(presenter: BookingPresenter,
          placesService: GooglePlacesService = GooglePlacesService()) {
         self.presenter = presenter
@@ -27,7 +23,7 @@ class BookingInteractor {
     func findPlaces(for query: String) {
         placesService.search(query: query) { [weak self] (results, error) in
             if let error = error {
-                // handler error
+                self?.presenter.present(error: error)
             } else {
                 self?.presenter.present(results: results)
             }
@@ -37,17 +33,10 @@ class BookingInteractor {
     func getPhoneNumber(placeId: String) {
         placesService.getDetails(for: placeId) { [weak self] (detail, error) in
             if let error = error {
-                // handle error
+                self?.presenter.present(error: error)
             } else if let detail = detail {
-                self?.attemptPhoneCall(to: detail.internationalPhoneNumber)
+                self?.presenter.prepare(internationalNumber: detail.internationalPhoneNumber, for: placeId)
             }
         }
-    }
-
-    /// Initiates a phone call to the specified international phone number.
-    ///
-    /// - Parameter internationalNumber: Phone number with the format "+(digits and spaces)"
-    func attemptPhoneCall(to internationalNumber: String) {
-        presenter.prepare(internationalNumber: internationalNumber)
     }
 }

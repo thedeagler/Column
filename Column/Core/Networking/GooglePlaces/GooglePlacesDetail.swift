@@ -9,8 +9,8 @@
 import Foundation
 
 struct GooglePlacesDetail: Codable {
-    var formattedPhoneNumber: String
-    var internationalPhoneNumber: String
+    var formattedPhoneNumber: String?
+    var internationalPhoneNumber: String?
 
     enum CodingKeys: String, CodingKey {
         case formattedPhoneNumber = "formatted_phone_number"

@@ -25,6 +25,16 @@ class BookingTableViewDatasource: NSObject, UITableViewDataSource {
         tableView.reloadData()
     }
 
+    /// Attempts to disable the call button for the place with the given id.
+    ///
+    /// - Parameter placeId: the identifier for the place to disable calling
+    /// - Returns: the index path of the place if disabled successfully
+    func disableCalling(for placeId: String) -> IndexPath? {
+        guard let i = places.firstIndex(where: { $0.id == placeId }) else { return nil }
+        places[i] = places[i].invalidatingPhoneNumber()
+        return places[i].hasValidPhoneNumber ? nil : IndexPath(row: i, section: 0)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.count
     }
@@ -47,7 +57,7 @@ extension BookingTableViewDatasource: UITableViewDelegate {
         guard let cell = tableView.cellForRow(at: indexPath) as? BookingResultTableViewCell else { return }
 
         places[indexPath.row].isExpanded ? cell.collapse() : cell.expand()
-        places[indexPath.row] = places[indexPath.row].sizeToggled()
+        places[indexPath.row] = places[indexPath.row].togglingSize()
 
         tableView.beginUpdates()
         tableView.endUpdates()

@@ -61,6 +61,9 @@
                             <constraint firstAttribute="width" secondItem="Wdo-Tm-4KE" secondAttribute="height" multiplier="1:1" id="qtz-LU-Xrd"/>
                         </constraints>
                         <state key="normal" image="phone-icon-filled"/>
+                        <state key="disabled">
+                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                         <connections>
                             <action selector="didTapCall:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fm8-pI-HxK"/>
                         </connections>
@@ -80,6 +83,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="callButton" destination="Wdo-Tm-4KE" id="bIn-kM-vUy"/>
                 <outlet property="descriptionLabel" destination="OzV-Xo-tkO" id="Hj1-Ku-sJ6"/>
                 <outlet property="textContainer" destination="Qq0-uX-zcS" id="IUq-uL-rxf"/>
                 <outlet property="titleIcon" destination="Y7c-yG-vgD" id="dV8-cM-Why"/>

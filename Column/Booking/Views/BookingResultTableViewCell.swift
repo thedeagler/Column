@@ -21,6 +21,11 @@ class BookingResultTableViewCell: UITableViewCell {
     @IBOutlet weak var titleIcon: UIImageView?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
+
+    override func awakeFromNib() {
+        callButton.setTitleColor(.lightGray, for: .disabled)
+    }
 
     @IBAction func didTapCall(_ sender: UIButton) {
         delegate?.didTapCall(id: placeId)
@@ -36,6 +41,8 @@ class BookingResultTableViewCell: UITableViewCell {
         titleLabel.attributedText = place.title
         descriptionLabel.attributedText = place.description
         placeId = place.id
+        callButton.isEnabled = place.hasValidPhoneNumber
+        callButton.tintColor = callButton.isEnabled ? contentView.tintColor : .lightGray
     }
 
     func expand() {
