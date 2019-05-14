@@ -9,7 +9,7 @@
 import UIKit
 
 class BookingViewController: UIViewController {
-    weak var interactor: BookingInteractor?
+    private let interactor: BookingInteractor
     private var datasource: BookingTableViewDatasource?
 
     @IBOutlet weak var headerContainer: UIView!
@@ -20,19 +20,23 @@ class BookingViewController: UIViewController {
     /// Constraint from search bar top to the top of the safe area
     @IBOutlet weak var searchToContainerTop: NSLayoutConstraint!
 
+    init(interactor: BookingInteractor) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        showResults()
     }
 
-    func showResults() {
-        let data = [
-            1,2,3,4,4,1,32,1,321,3,21,321,3,21,32,13,2,3,2,32,13,21,3
-        ]
-
+    func show(places: [BookingResultViewModel]) {
         datasource = BookingTableViewDatasource()
-        datasource?.businesses = data
+        datasource?.places = places
         datasource?.set(for: resultsTableView)
     }
 }
@@ -64,7 +68,7 @@ fileprivate extension BookingViewController {
 extension BookingViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let query = searchBar.text ?? ""
-        print(query)
+        interactor.findPlaces(for: query)
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -75,6 +79,8 @@ extension BookingViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchBar.setShowsCancelButton(false, animated: true)
+        show(places: [])
+        searchBar.text = nil
         expandHeader()
     }
 }

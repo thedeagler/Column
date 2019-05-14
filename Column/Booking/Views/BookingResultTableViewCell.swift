@@ -10,17 +10,28 @@ import UIKit
 
 class BookingResultTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private struct Constants {
+        static let titleIconHeight: CGFloat = 33
+        static let titleIconPadding: CGFloat = 4
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBOutlet weak var textContainer: UIView!
+    @IBOutlet weak var titleIcon: UIImageView?
+    @IBOutlet weak var titleIconHeight: NSLayoutConstraint!
+    @IBOutlet weak var titleIconPadding: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
 
-        // Configure the view for the selected state
+    func configure(for place: BookingResultViewModel) {
+        if let icon = place.titleIcon {
+            titleIcon?.image = icon
+            showTitleIcon()
+        } else {
+            hideTitleIcon()
+        }
+        titleLabel.attributedText = place.title
+        descriptionLabel.attributedText = place.description
     }
 
     func expand() {
@@ -30,7 +41,16 @@ class BookingResultTableViewCell: UITableViewCell {
 
     func collapse() {
         titleLabel.numberOfLines = 2
-        descriptionLabel.numberOfLines = 2
+        descriptionLabel.numberOfLines = 1
     }
-    
+
+    private func hideTitleIcon() {
+        titleIconHeight.constant = 0
+        titleIconPadding.constant = 0
+    }
+
+    private func showTitleIcon() {
+        titleIconHeight.constant = Constants.titleIconHeight
+        titleIconPadding.constant = Constants.titleIconPadding
+    }
 }

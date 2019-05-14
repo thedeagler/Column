@@ -20,10 +20,13 @@
 		7F19C9C022860BA500D21ABB /* BookingTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9BF22860BA500D21ABB /* BookingTableViewDatasource.swift */; };
 		7F19C9C6228616FC00D21ABB /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9C5228616FC00D21ABB /* Webservice.swift */; };
 		7F19C9D12286227800D21ABB /* GooglePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D02286227800D21ABB /* GooglePlacesService.swift */; };
-		7F19C9D6228624EE00D21ABB /* PlacesRequesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */; };
-		7F19C9D82286253400D21ABB /* PlacesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */; };
+		7F19C9D82286253400D21ABB /* GooglePlacesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D72286253400D21ABB /* GooglePlacesSearchResult.swift */; };
+		7F19C9DA2286296F00D21ABB /* GooglePlaceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */; };
+		7F19C9DF22866AC100D21ABB /* GooglePlacesSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */; };
+		7F286C7A228A3E690093FA3B /* BookingResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F286C79228A3E690093FA3B /* BookingResultViewModel.swift */; };
+		7F286C7C228A4E420093FA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F286C7B228A4E420093FA3B /* Assets.xcassets */; };
+		7F286C7E228A4F3F0093FA3B /* NSAttributedString+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
-		7FF9DE402285292F009886E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE3F2285292F009886E7 /* Assets.xcassets */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
 		7FF9DE4E22852930009886E7 /* ColumnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE4D22852930009886E7 /* ColumnTests.swift */; };
 /* End PBXBuildFile section */
@@ -54,11 +57,14 @@
 		7F19C9CD22861E0500D21ABB /* secrets.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.example.xcconfig; sourceTree = "<group>"; };
 		7F19C9CF2286209700D21ABB /* secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secrets.xcconfig; sourceTree = "<group>"; };
 		7F19C9D02286227800D21ABB /* GooglePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesService.swift; sourceTree = "<group>"; };
-		7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRequesting.swift; sourceTree = "<group>"; };
-		7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchResult.swift; sourceTree = "<group>"; };
+		7F19C9D72286253400D21ABB /* GooglePlacesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesSearchResult.swift; sourceTree = "<group>"; };
+		7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceTypes.swift; sourceTree = "<group>"; };
+		7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesSearchResponse.swift; sourceTree = "<group>"; };
+		7F286C79228A3E690093FA3B /* BookingResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingResultViewModel.swift; sourceTree = "<group>"; };
+		7F286C7B228A4E420093FA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Image.swift"; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FF9DE3F2285292F009886E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FF9DE422285292F009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF9DE442285292F009886E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FF9DE4922852930009886E7 /* ColumnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColumnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,7 @@
 				7F19C9B6228601B300D21ABB /* Views */,
 				7F19C99122852BE400D21ABB /* Module */,
 				7F19C9BF22860BA500D21ABB /* BookingTableViewDatasource.swift */,
+				7F286C79228A3E690093FA3B /* BookingResultViewModel.swift */,
 			);
 			path = Booking;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 				7F19C98F22852B2900D21ABB /* UIView+Nib.swift */,
 				7F19C9A8228553FB00D21ABB /* UIImage+Color.swift */,
 				7F19C9B22285EBDD00D21ABB /* UIView+Constrain.swift */,
+				7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7F19C9C5228616FC00D21ABB /* Webservice.swift */,
-				7F19C9D2228623EF00D21ABB /* Places */,
+				7F19C9D2228623EF00D21ABB /* GooglePlaces */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -162,14 +170,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		7F19C9D2228623EF00D21ABB /* Places */ = {
+		7F19C9D2228623EF00D21ABB /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				7F19C9D5228624EE00D21ABB /* PlacesRequesting.swift */,
+				7F19C9D72286253400D21ABB /* GooglePlacesSearchResult.swift */,
 				7F19C9D02286227800D21ABB /* GooglePlacesService.swift */,
-				7F19C9D72286253400D21ABB /* PlacesSearchResult.swift */,
+				7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */,
+				7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */,
 			);
-			path = Places;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
 		7FF9DE2C2285292E009886E7 = {
@@ -194,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF9DE442285292F009886E7 /* Info.plist */,
-				7FF9DE3F2285292F009886E7 /* Assets.xcassets */,
+				7F286C7B228A4E420093FA3B /* Assets.xcassets */,
 				7F19C98B22852AA700D21ABB /* Core */,
 				7F19C98922852A5E00D21ABB /* Main */,
 				7F19C98A22852A8000D21ABB /* Booking */,
@@ -292,9 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F286C7C228A4E420093FA3B /* Assets.xcassets in Resources */,
 				7F19C9BE2286024F00D21ABB /* BookingResultTableViewCell.xib in Resources */,
 				7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */,
-				7FF9DE402285292F009886E7 /* Assets.xcassets in Resources */,
 				7F19C9A72285324700D21ABB /* BookingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,18 +322,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F286C7E228A4F3F0093FA3B /* NSAttributedString+Image.swift in Sources */,
 				7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */,
+				7F19C9DF22866AC100D21ABB /* GooglePlacesSearchResponse.swift in Sources */,
 				7F19C9B32285EBDD00D21ABB /* UIView+Constrain.swift in Sources */,
 				7F19C9C022860BA500D21ABB /* BookingTableViewDatasource.swift in Sources */,
+				7F19C9DA2286296F00D21ABB /* GooglePlaceTypes.swift in Sources */,
 				7F19C9BD2286024F00D21ABB /* BookingResultTableViewCell.swift in Sources */,
 				7F19C9C6228616FC00D21ABB /* Webservice.swift in Sources */,
 				7F19C99322852C2000D21ABB /* BookingModule.swift in Sources */,
-				7F19C9D82286253400D21ABB /* PlacesSearchResult.swift in Sources */,
+				7F19C9D82286253400D21ABB /* GooglePlacesSearchResult.swift in Sources */,
 				7F19C99722852C3500D21ABB /* BookingPresenter.swift in Sources */,
 				7F19C9D12286227800D21ABB /* GooglePlacesService.swift in Sources */,
+				7F286C7A228A3E690093FA3B /* BookingResultViewModel.swift in Sources */,
 				7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */,
 				7F19C99022852B2900D21ABB /* UIView+Nib.swift in Sources */,
-				7F19C9D6228624EE00D21ABB /* PlacesRequesting.swift in Sources */,
 				7F19C9A9228553FB00D21ABB /* UIImage+Color.swift in Sources */,
 				7F19C99522852C2C00D21ABB /* BookingInteractor.swift in Sources */,
 			);

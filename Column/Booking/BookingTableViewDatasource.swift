@@ -8,9 +8,13 @@
 
 import UIKit
 
+struct PlaceViewModel {
+    
+}
+
 class BookingTableViewDatasource: NSObject, UITableViewDataSource {
 
-    var businesses: [Int] = []
+    var places: [BookingResultViewModel] = []
 
     struct ReuseId {
         static let cell = "cell"
@@ -25,11 +29,15 @@ class BookingTableViewDatasource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return businesses.count
+        return places.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseId.cell, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReuseId.cell, for: indexPath) as? BookingResultTableViewCell else {
+            fatalError("Dequeued cell of incorrect type.")
+        }
+
+        cell.configure(for: places[indexPath.row])
         return cell
     }
 }
@@ -40,8 +48,11 @@ extension BookingTableViewDatasource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? BookingResultTableViewCell else { return }
 
-        cell.expand()
+        places[indexPath.row].isExpanded ? cell.collapse() : cell.expand()
+        places[indexPath.row] = places[indexPath.row].sizeToggled()
+
         tableView.beginUpdates()
         tableView.endUpdates()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

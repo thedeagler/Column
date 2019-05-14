@@ -14,9 +14,9 @@ class BookingModule {
     let viewController: BookingViewController
 
     init() {
-        viewController = .init()
-        presenter = .init(view: viewController)
+        presenter = .init()
         interactor = .init(presenter: presenter)
-        viewController.interactor = interactor
+        viewController = .init(interactor: interactor)
+        presenter.view = viewController
     }
 }

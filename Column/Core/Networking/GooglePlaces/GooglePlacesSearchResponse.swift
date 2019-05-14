@@ -1,5 +1,5 @@
 //
-//  PlacesSearchResult.swift
+//  GooglePlacesSearchResponse.swift
 //  Column
 //
 //  Created by Stephen Wu on 5/10/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct PlacesSearchResult {
-    
+struct GooglePlacesSearchResponse: Codable {
+    let results: [GooglePlacesSearchResult]
 }

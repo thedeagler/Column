@@ -12,50 +12,54 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="183" id="KGk-i7-Jjw" customClass="BookingResultTableViewCell" customModule="Column" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="BookingResultTableViewCell" customModule="Column" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caret-down" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-ls-9rX">
-                        <rect key="frame" x="288" y="83.5" width="16" height="16"/>
-                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="Yb6-ls-9rX" secondAttribute="height" multiplier="1:1" id="Jvg-6s-yhV"/>
-                            <constraint firstAttribute="height" constant="16" id="yJZ-Mg-VI8"/>
-                        </constraints>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qq0-uX-zcS" userLabel="Text Container">
-                        <rect key="frame" x="16" y="8" width="215" height="166.5"/>
+                        <rect key="frame" x="16" y="8" width="247" height="133.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Its a hotel in the heart of san francisco the space station" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzV-Xo-tkO">
-                                <rect key="frame" x="0.0" y="150.5" width="215" height="16"/>
+                                <rect key="frame" x="0.0" y="117.5" width="247" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Super mega hilton of san francisco in the most beautiful space station in the universe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXd-9D-EPt">
-                                <rect key="frame" x="0.0" y="0.0" width="215" height="146.5"/>
+                                <rect key="frame" x="37" y="0.0" width="210" height="113.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-yG-vgD">
+                                <rect key="frame" x="0.0" y="40.5" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="7VA-Cn-shN"/>
+                                    <constraint firstAttribute="width" secondItem="Y7c-yG-vgD" secondAttribute="height" multiplier="1:1" id="bLc-U6-Sn4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OzV-Xo-tkO" firstAttribute="leading" secondItem="FXd-9D-EPt" secondAttribute="leading" id="6Va-nQ-nau"/>
+                            <constraint firstItem="OzV-Xo-tkO" firstAttribute="leading" secondItem="Qq0-uX-zcS" secondAttribute="leading" id="BbT-fH-035"/>
                             <constraint firstAttribute="trailing" secondItem="OzV-Xo-tkO" secondAttribute="trailing" id="Dda-si-9ER"/>
+                            <constraint firstItem="FXd-9D-EPt" firstAttribute="leading" secondItem="Y7c-yG-vgD" secondAttribute="trailing" constant="4" id="IGX-dF-kz7"/>
+                            <constraint firstItem="Y7c-yG-vgD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qq0-uX-zcS" secondAttribute="top" id="JL9-rP-cG2"/>
                             <constraint firstAttribute="trailing" secondItem="FXd-9D-EPt" secondAttribute="trailing" id="RWv-R2-QXx"/>
+                            <constraint firstItem="FXd-9D-EPt" firstAttribute="leading" secondItem="Qq0-uX-zcS" secondAttribute="leading" priority="750" id="bn6-fe-FtB"/>
                             <constraint firstItem="OzV-Xo-tkO" firstAttribute="top" secondItem="FXd-9D-EPt" secondAttribute="bottom" constant="4" id="eNl-zk-6yL"/>
-                            <constraint firstItem="FXd-9D-EPt" firstAttribute="leading" secondItem="Qq0-uX-zcS" secondAttribute="leading" id="eWA-no-zBY"/>
                             <constraint firstAttribute="bottom" secondItem="OzV-Xo-tkO" secondAttribute="bottom" id="fRv-aZ-yWg"/>
+                            <constraint firstItem="Y7c-yG-vgD" firstAttribute="centerY" secondItem="FXd-9D-EPt" secondAttribute="centerY" id="iXP-5F-isf"/>
+                            <constraint firstItem="OzV-Xo-tkO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y7c-yG-vgD" secondAttribute="bottom" constant="4" id="vZi-rY-KC5"/>
+                            <constraint firstItem="Y7c-yG-vgD" firstAttribute="leading" secondItem="Qq0-uX-zcS" secondAttribute="leading" id="xH9-2L-Zla"/>
                             <constraint firstItem="FXd-9D-EPt" firstAttribute="top" secondItem="Qq0-uX-zcS" secondAttribute="top" id="xNS-JY-bcY"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-Tm-4KE">
-                        <rect key="frame" x="239" y="75" width="33" height="33"/>
+                        <rect key="frame" x="271" y="58.5" width="33" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="Yj3-dD-Hvl"/>
                             <constraint firstAttribute="width" secondItem="Wdo-Tm-4KE" secondAttribute="height" multiplier="1:1" id="qtz-LU-Xrd"/>
@@ -63,11 +67,10 @@
                         <state key="normal" image="phone-icon-filled"/>
                     </button>
                 </subviews>
+                <color key="tintColor" red="0.29147374349999999" green="0.78684513140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstItem="Yb6-ls-9rX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EPX-Ec-J8x"/>
-                    <constraint firstItem="Yb6-ls-9rX" firstAttribute="leading" secondItem="Wdo-Tm-4KE" secondAttribute="trailing" constant="16" id="IrY-KY-dVJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Wdo-Tm-4KE" secondAttribute="trailing" constant="16" id="JB1-JB-1SR"/>
                     <constraint firstItem="Wdo-Tm-4KE" firstAttribute="leading" secondItem="Qq0-uX-zcS" secondAttribute="trailing" constant="8" id="dgt-LP-mEt"/>
-                    <constraint firstAttribute="trailing" secondItem="Yb6-ls-9rX" secondAttribute="trailing" constant="16" id="n4a-nw-OjC"/>
                     <constraint firstItem="Wdo-Tm-4KE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qr6-eC-muF"/>
                     <constraint firstItem="Qq0-uX-zcS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tZo-LI-dEM"/>
                     <constraint firstAttribute="bottom" secondItem="Qq0-uX-zcS" secondAttribute="bottom" constant="8" id="ttx-63-axo"/>
@@ -76,14 +79,19 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="callButton" destination="Wdo-Tm-4KE" id="gBy-A4-AEE"/>
                 <outlet property="descriptionLabel" destination="OzV-Xo-tkO" id="Hj1-Ku-sJ6"/>
+                <outlet property="textContainer" destination="Qq0-uX-zcS" id="IUq-uL-rxf"/>
+                <outlet property="titleIcon" destination="Y7c-yG-vgD" id="dV8-cM-Why"/>
+                <outlet property="titleIconHeight" destination="7VA-Cn-shN" id="fX5-Zw-2Ff"/>
+                <outlet property="titleIconPadding" destination="IGX-dF-kz7" id="IcA-d2-fm5"/>
                 <outlet property="titleLabel" destination="FXd-9D-EPt" id="nnQ-Yx-I4x"/>
             </connections>
-            <point key="canvasLocation" x="163.768115942029" y="82.03125"/>
+            <point key="canvasLocation" x="163.768115942029" y="70.3125"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="caret-down" width="33" height="33"/>
+        <image name="hotel" width="33" height="33"/>
         <image name="phone-icon-filled" width="33" height="33"/>
     </resources>
 </document>
