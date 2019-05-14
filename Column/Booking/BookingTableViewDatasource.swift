@@ -8,13 +8,10 @@
 
 import UIKit
 
-struct PlaceViewModel {
-    
-}
-
 class BookingTableViewDatasource: NSObject, UITableViewDataSource {
 
     var places: [BookingResultViewModel] = []
+    weak var cellActionDelegate: BookingResultCellDelegate?
 
     struct ReuseId {
         static let cell = "cell"
@@ -38,6 +35,7 @@ class BookingTableViewDatasource: NSObject, UITableViewDataSource {
         }
 
         cell.configure(for: places[indexPath.row])
+        cell.delegate = cellActionDelegate
         return cell
     }
 }

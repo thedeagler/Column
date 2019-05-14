@@ -34,6 +34,9 @@ class BookingInteractor {
     }
 
     func getPhoneNumber(placeId: String) {
-        
+        placesService.getDetails(for: placeId) { [weak self] (detail, error) in
+            print("*** detail, error:", detail, error)
+        }
+
     }
 }

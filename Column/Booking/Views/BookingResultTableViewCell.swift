@@ -8,12 +8,23 @@
 
 import UIKit
 
+protocol BookingResultCellDelegate: class {
+    func didTapCall(id: String)
+}
+
 class BookingResultTableViewCell: UITableViewCell {
+
+    var placeId: String!
+    weak var delegate: BookingResultCellDelegate?
+
     @IBOutlet weak var textContainer: UIView!
     @IBOutlet weak var titleIcon: UIImageView?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var callButton: UIButton!
+
+    @IBAction func didTapCall(_ sender: UIButton) {
+        delegate?.didTapCall(id: placeId)
+    }
 
     func configure(for place: BookingResultViewModel) {
         if let icon = place.titleIcon {
@@ -24,6 +35,7 @@ class BookingResultTableViewCell: UITableViewCell {
         titleIcon?.tintColor = place.titleIconTint
         titleLabel.attributedText = place.title
         descriptionLabel.attributedText = place.description
+        placeId = place.id
     }
 
     func expand() {

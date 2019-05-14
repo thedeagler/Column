@@ -1,0 +1,13 @@
+//
+//  GooglePlacesDetailResponse.swift
+//  Column
+//
+//  Created by Stephen Wu on 5/14/19.
+//  Copyright © 2019 Stephen Wu. All rights reserved.
+//
+
+import Foundation
+
+struct GooglePlacesDetailResponse: Codable {
+    let result: GooglePlacesDetail
+}

@@ -39,6 +39,7 @@ class BookingViewController: UIViewController {
         datasource = BookingTableViewDatasource()
         datasource?.places = places
         datasource?.set(for: resultsTableView)
+        datasource?.cellActionDelegate = self
     }
 }
 
@@ -83,5 +84,12 @@ extension BookingViewController: UISearchBarDelegate {
         show(places: [])
         searchBar.text = nil
         expandHeader()
+    }
+}
+
+// MARK: Cell action delegate
+extension BookingViewController: BookingResultCellDelegate {
+    func didTapCall(id: String) {
+        interactor.getPhoneNumber(placeId: id)
     }
 }
