@@ -32,4 +32,8 @@ class BookingInteractor {
             }
         }
     }
+
+    func getPhoneNumber(placeId: String) {
+        
+    }
 }

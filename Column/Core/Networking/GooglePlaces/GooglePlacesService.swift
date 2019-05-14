@@ -12,15 +12,21 @@ import Foundation
 /// The service structs are responsible for making network requests and deserializing the responses.
 struct GooglePlacesService {
 
-    private struct Endpoints {
-        static let search = "https://maps.googleapis.com/maps/api/place/textsearch/json"
-        static let detail = "https://maps.googleapis.com/maps/api/place/details/json"
+    struct QueryKey {
+        static let query = "query"
+        static let key = "key"
+        static let type = "type"
+        static let location = "location"
+        static let radius = "radius"
+    }
+
+    private struct Endpoint {
+        static let search = GooglePlacesEndpoint(path: "/maps/api/place/textsearch/json")
+        static let detail = GooglePlacesEndpoint(path: "/maps/api/place/details/json")
     }
 
     private let webservice: Webservice
     private let decoder = JSONDecoder()
-
-    private let apiKey = Bundle.main.object(forInfoDictionaryKey: "Google Places API Key") as! String
 
     init(webservice: Webservice = Webservice()) {
         self.webservice = webservice
@@ -33,10 +39,16 @@ struct GooglePlacesService {
     ///   - type: The kind of place to search for (hotel, car rental, etc)
     ///   - completion: Callback executed on response.
     func search(query: String, type: GooglePlaceType, completion: @escaping([GooglePlacesSearchResult], Error?) -> Void) {
-        var components = URLComponents.init(string: Endpoints.search)!
-        components.queryItems = queryItems(for: query, type: type)
+        let url = Endpoint.search
+            .adding([
+                URLQueryItem(name: QueryKey.location, value: "40.785276,-73.9651827"),
+                URLQueryItem(name: QueryKey.radius, value: "50000"),
+                URLQueryItem(name: QueryKey.query, value: query),
+                URLQueryItem(name: QueryKey.type, value: type.rawValue)
+            ])
+            .url
 
-        webservice.get(url: components.url!) { (data, response, error) in
+        webservice.get(url: url) { (data, response, error) in
 
             if let error = error {
                 completion([], error) // Network error
@@ -53,28 +65,9 @@ struct GooglePlacesService {
         }
     }
 
+    /// Retrieves the details about a place by ID. We only need the phone number here, but we can
+    /// get a lot more.
     func details(placeId: String) {
 
     }
 }
-
-private extension GooglePlacesService {
-    struct Keys {
-        static let query = "query"
-        static let key = "key"
-        static let type = "type"
-        static let location = "location"
-        static let radius = "radius"
-    }
-
-    func queryItems(for query: String, type: GooglePlaceType) -> [URLQueryItem] {
-        return [
-            URLQueryItem(name: Keys.location, value: "40.785276,-73.9651827"),
-            URLQueryItem(name: Keys.radius, value: "50000"),
-            URLQueryItem(name: Keys.query, value: query),
-//            URLQueryItem(name: Keys.type, value: type.rawValue),
-            URLQueryItem(name: Keys.key, value: apiKey)
-        ]
-    }
-}
-

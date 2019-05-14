@@ -9,6 +9,11 @@
 import Foundation
 
 struct Webservice {
+    let urlSession: URLSession
+
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
+    }
 
     /// Makes a GET request to the specified url. Completion is called on the main thread once a
     /// response is received.
@@ -21,7 +26,7 @@ struct Webservice {
     func get(url: URL, completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) -> URLSessionDataTask {
         let request = URLRequest(url: url)
 
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = urlSession.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 completion(data, response, error)
             }
