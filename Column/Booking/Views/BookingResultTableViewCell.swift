@@ -8,14 +8,10 @@
 
 import UIKit
 
-protocol BookingResultCellDelegate: class {
-    func didTapCall(id: String)
-}
-
 class BookingResultTableViewCell: UITableViewCell {
 
     var placeId: String!
-    weak var delegate: BookingResultCellDelegate?
+    weak var delegate: BookingResultActionDelegate?
 
     @IBOutlet weak var textContainer: UIView!
     @IBOutlet weak var titleIcon: UIImageView?
@@ -23,12 +19,8 @@ class BookingResultTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var callButton: UIButton!
 
-    override func awakeFromNib() {
-        callButton.setTitleColor(.lightGray, for: .disabled)
-    }
-
     @IBAction func didTapCall(_ sender: UIButton) {
-        delegate?.didTapCall(id: placeId)
+        delegate?.didTapCall(placeId: placeId)
     }
 
     func configure(for place: BookingResultViewModel) {
@@ -43,15 +35,5 @@ class BookingResultTableViewCell: UITableViewCell {
         placeId = place.id
         callButton.isEnabled = place.hasValidPhoneNumber
         callButton.tintColor = callButton.isEnabled ? contentView.tintColor : .lightGray
-    }
-
-    func expand() {
-        titleLabel.numberOfLines = 4
-        descriptionLabel.numberOfLines = 2
-    }
-
-    func collapse() {
-        titleLabel.numberOfLines = 2
-        descriptionLabel.numberOfLines = 1
     }
 }

@@ -147,8 +147,12 @@ extension BookingViewController: UISearchBarDelegate {
 }
 
 // MARK: Cell action delegate
-extension BookingViewController: BookingResultCellDelegate {
-    func didTapCall(id: String) {
-        interactor.getPhoneNumber(placeId: id)
+extension BookingViewController: BookingResultActionDelegate {
+    func didTapCall(placeId: String) {
+        interactor.getPhoneNumber(placeId: placeId)
+    }
+
+    func navigateTo(placeId: String) {
+        
     }
 }

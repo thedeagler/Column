@@ -21,8 +21,6 @@ struct BookingResultViewModel {
     /// Text to show as the secondary text in the result cell
     let description: NSAttributedString
 
-    /// Whether or not the cell should be expanded to show more lines of text.
-    let isExpanded: Bool
     /// Whether or not the place has a phone number that can be called.
     let hasValidPhoneNumber: Bool
 
@@ -30,24 +28,17 @@ struct BookingResultViewModel {
          title: NSAttributedString,
          titleIcon: UIImage?,
          description: NSAttributedString,
-         isExpanded: Bool = false,
          hasValidPhoneNumber: Bool = true) {
 
         self.id = id
         self.title = title
         self.titleIcon = titleIcon
         self.description = description
-        self.isExpanded = isExpanded
         self.hasValidPhoneNumber = hasValidPhoneNumber
-    }
-
-    /// Creates a copy of the view model where `isExpanded` is opposite of the current value.
-    func togglingSize() -> BookingResultViewModel {
-        return BookingResultViewModel(id: id, title: title, titleIcon: titleIcon, description: description, isExpanded: !isExpanded, hasValidPhoneNumber: hasValidPhoneNumber)
     }
 
     /// Creates a copy of the view model where the phone number is not valid
     func invalidatingPhoneNumber() -> BookingResultViewModel {
-        return BookingResultViewModel(id: id, title: title, titleIcon: titleIcon, description: description, isExpanded: isExpanded, hasValidPhoneNumber: false)
+        return BookingResultViewModel(id: id, title: title, titleIcon: titleIcon, description: description, hasValidPhoneNumber: false)
     }
 }

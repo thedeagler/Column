@@ -11,7 +11,7 @@ import UIKit
 class BookingTableViewDatasource: NSObject, UITableViewDataSource {
 
     var places: [BookingResultViewModel] = []
-    weak var cellActionDelegate: BookingResultCellDelegate?
+    weak var cellActionDelegate: BookingResultActionDelegate?
 
     struct ReuseId {
         static let cell = "cell"
@@ -54,13 +54,8 @@ class BookingTableViewDatasource: NSObject, UITableViewDataSource {
 
 extension BookingTableViewDatasource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? BookingResultTableViewCell else { return }
-
-        places[indexPath.row].isExpanded ? cell.collapse() : cell.expand()
-        places[indexPath.row] = places[indexPath.row].togglingSize()
-
-        tableView.beginUpdates()
-        tableView.endUpdates()
+        let place = places[indexPath.row]
+        cellActionDelegate?.navigateTo(placeId: place.id)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
