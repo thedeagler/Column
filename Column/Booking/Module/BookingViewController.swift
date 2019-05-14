@@ -32,6 +32,7 @@ class BookingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        interactor.findPlaces(for: "hilton")
     }
 
     func show(places: [BookingResultViewModel]) {

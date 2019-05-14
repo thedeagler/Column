@@ -22,7 +22,7 @@ class BookingPresenter {
             if let type = $0.types.first {
                 switch type {
                 case .carRental: titleIcon = #imageLiteral(resourceName: "car-icon-filled")
-                case .hotel: titleIcon = #imageLiteral(resourceName: "hotel")
+                case .hotel: titleIcon = #imageLiteral(resourceName: "hotel-filled")
                 }
             }
             title.append(NSAttributedString(string: $0.name))

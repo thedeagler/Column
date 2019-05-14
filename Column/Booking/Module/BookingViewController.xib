@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-Kr-YqC">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
                     <subviews>
-                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="7lv-zP-4Vt">
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="7lv-zP-4Vt">
                             <rect key="frame" x="16" y="116" width="382" height="56"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>

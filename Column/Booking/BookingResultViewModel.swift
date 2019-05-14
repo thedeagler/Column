@@ -16,6 +16,8 @@ struct BookingResultViewModel {
     let title: NSAttributedString
     /// Icon to display for this type of result
     let titleIcon: UIImage?
+    /// The color of the title icon
+    let titleIconTint: UIColor = .lightGray
     /// Text to show as the secondary text in the result cell
     let description: NSAttributedString
     /// Whether or not the cell should be expanded to show more lines of text.
