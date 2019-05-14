@@ -18,7 +18,8 @@ class BookingInteractor {
         static let defaultGooglePlaceTypes: [GooglePlaceType] = [.carRental, .hotel]
     }
 
-    init(presenter: BookingPresenter, placesService: GooglePlacesService = GooglePlacesService()) {
+    init(presenter: BookingPresenter,
+         placesService: GooglePlacesService = GooglePlacesService()) {
         self.presenter = presenter
         self.placesService = placesService
     }
@@ -35,8 +36,18 @@ class BookingInteractor {
 
     func getPhoneNumber(placeId: String) {
         placesService.getDetails(for: placeId) { [weak self] (detail, error) in
-            print("*** detail, error:", detail, error)
+            if let error = error {
+                // handle error
+            } else if let detail = detail {
+                self?.attemptPhoneCall(to: detail.internationalPhoneNumber)
+            }
         }
+    }
 
+    /// Initiates a phone call to the specified international phone number.
+    ///
+    /// - Parameter internationalNumber: Phone number with the format "+(digits and spaces)"
+    func attemptPhoneCall(to internationalNumber: String) {
+        presenter.prepare(internationalNumber: internationalNumber)
     }
 }

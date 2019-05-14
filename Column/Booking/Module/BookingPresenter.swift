@@ -34,4 +34,15 @@ class BookingPresenter {
 
         view?.show(places: places)
     }
+
+    func prepare(internationalNumber: String) {
+        let number = internationalNumber
+            .replacingOccurrences(of: " ", with: "")
+        guard let url = URL(string: "tel://\(number)") else {
+            // handle error
+            return
+        }
+
+        view?.call(url: url)
+    }
 }

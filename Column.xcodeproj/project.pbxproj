@@ -31,6 +31,7 @@
 		7F2B4D5D228B26B600DBE5CC /* GooglePlacesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D5C228B26B600DBE5CC /* GooglePlacesEndpoint.swift */; };
 		7F2B4D5F228B3C2D00DBE5CC /* GooglePlacesDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D5E228B3C2D00DBE5CC /* GooglePlacesDetail.swift */; };
 		7F2B4D61228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */; };
+		7FF227E1228B432400E05749 /* UIApplication+UrlOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227E0228B432400E05749 /* UIApplication+UrlOpener.swift */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
 		7FF9DE4E22852930009886E7 /* ColumnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE4D22852930009886E7 /* ColumnTests.swift */; };
@@ -73,6 +74,7 @@
 		7F2B4D5C228B26B600DBE5CC /* GooglePlacesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesEndpoint.swift; sourceTree = "<group>"; };
 		7F2B4D5E228B3C2D00DBE5CC /* GooglePlacesDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDetail.swift; sourceTree = "<group>"; };
 		7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDetailResponse.swift; sourceTree = "<group>"; };
+		7FF227E0228B432400E05749 /* UIApplication+UrlOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UrlOpener.swift"; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF9DE422285292F009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				7F19C9B22285EBDD00D21ABB /* UIView+Constrain.swift */,
 				7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */,
 				7F2B4D5A228B24CD00DBE5CC /* Array+Appending.swift */,
+				7FF227E0228B432400E05749 /* UIApplication+UrlOpener.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF227E1228B432400E05749 /* UIApplication+UrlOpener.swift in Sources */,
 				7F286C7E228A4F3F0093FA3B /* NSAttributedString+Image.swift in Sources */,
 				7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */,
 				7F19C9DF22866AC100D21ABB /* GooglePlacesSearchResponse.swift in Sources */,
