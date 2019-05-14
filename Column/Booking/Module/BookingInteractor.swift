@@ -25,7 +25,7 @@ class BookingInteractor {
     }
 
     func findPlaces(for query: String) {
-        placesService.search(query: query, type: .hotel) { [weak self] (results, error) in
+        placesService.search(query: query) { [weak self] (results, error) in
             if let error = error {
                 // handler error
             } else {

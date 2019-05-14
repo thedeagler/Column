@@ -15,7 +15,6 @@ struct GooglePlacesService {
         // Search request query keys
         case query = "query"
         case key = "key"
-        case type = "type"
         case location = "location"
         case radius = "radius"
 
@@ -47,13 +46,12 @@ struct GooglePlacesService {
     ///   - query: The search term to match
     ///   - type: The kind of place to search for (hotel, car rental, etc)
     ///   - completion: Callback executed on response.
-    func search(query: String, type: GooglePlaceType, completion: @escaping([GooglePlacesSearchResult], Error?) -> Void) {
+    func search(query: String, completion: @escaping([GooglePlacesSearchResult], Error?) -> Void) {
         let url = Endpoint.search
             .adding([
                 Query.location.item(value: "40.785276,-73.9651827"),
                 Query.radius.item(value: "50000"),
                 Query.query.item(value: query),
-                Query.type.item(value: type.rawValue)
             ])
             .url
 

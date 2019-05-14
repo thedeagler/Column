@@ -190,9 +190,9 @@
 			children = (
 				7F19C9D02286227800D21ABB /* GooglePlacesService.swift */,
 				7F2B4D5C228B26B600DBE5CC /* GooglePlacesEndpoint.swift */,
-				7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */,
 				7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */,
 				7F19C9D72286253400D21ABB /* GooglePlacesSearchResult.swift */,
+				7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */,
 				7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */,
 				7F2B4D5E228B3C2D00DBE5CC /* GooglePlacesDetail.swift */,
 			);
