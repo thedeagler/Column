@@ -12,8 +12,6 @@ class BookingViewController: UIViewController {
 
     private let interactor: BookingInteractor
     private var datasource: BookingTableViewDatasource?
-    /// Used to place phone calls
-    private let urlOpener: URLOpener
 
     @IBOutlet weak var headerContainer: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,10 +23,8 @@ class BookingViewController: UIViewController {
     /// Constraint from search bar top to the top of the safe area
     @IBOutlet weak var searchToContainerTop: NSLayoutConstraint!
 
-    init(interactor: BookingInteractor,
-         urlOpener: URLOpener = UIApplication.shared) {
+    init(interactor: BookingInteractor) {
         self.interactor = interactor
-        self.urlOpener = urlOpener
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -59,10 +55,8 @@ class BookingViewController: UIViewController {
         hideLoading()
     }
 
-    func call(url: URL) {
-        if urlOpener.canOpenURL(url) {
-            urlOpener.open(url, options: [:], completionHandler: nil)
-        }
+    func call(phoneNumber: InternationalPhoneNumber) {
+        phoneNumber.initiateCall()
     }
 
     func show(alert: UIAlertController) {
@@ -153,6 +147,7 @@ extension BookingViewController: BookingResultActionDelegate {
     }
 
     func navigateTo(placeId: String) {
-        
+        let module = BookingDetailModule(placeId: placeId)
+        present(module.viewController, animated: true, completion: nil)
     }
 }

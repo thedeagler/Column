@@ -31,7 +31,8 @@ class BookingInteractor {
     }
 
     func getPhoneNumber(placeId: String) {
-        placesService.getDetails(for: placeId) { [weak self] (detail, error) in
+        let detailFields: [GooglePlaceDetailField] = [.placeId, .internationalPhoneNumber, .formattedPhoneNumber]
+        placesService.getDetails(for: placeId, fields: detailFields) { [weak self] (detail, error) in
             if let error = error {
                 self?.presenter.present(error: error)
             } else if let detail = detail {

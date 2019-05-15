@@ -74,10 +74,10 @@ struct GooglePlacesService {
 
     /// Retrieves the details about a place by ID. We only need the phone number here, but we can
     /// get a lot more.
-    func getDetails(for placeId: String, completion: @escaping (GooglePlacesDetail?, Error?) -> Void) {
+    func getDetails(for placeId: String, fields: [GooglePlaceDetailField], completion: @escaping (GooglePlacesDetail?, Error?) -> Void) {
         let url = Endpoint.detail
             .adding([
-                Query.fields.item(value: "formatted_phone_number,international_phone_number"),
+                Query.fields.item(value: fields.map { $0.rawValue }.joined(separator: ",")),
                 Query.placeId.item(value: placeId)
             ])
             .url

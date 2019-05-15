@@ -33,6 +33,14 @@
 		7F2B4D61228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */; };
 		7FF227E1228B432400E05749 /* UIApplication+UrlOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227E0228B432400E05749 /* UIApplication+UrlOpener.swift */; };
 		7FF227E3228B86F200E05749 /* BookingResultActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227E2228B86F200E05749 /* BookingResultActionDelegate.swift */; };
+		7FF227E7228B881E00E05749 /* BookingDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227E6228B881E00E05749 /* BookingDetailModule.swift */; };
+		7FF227E9228B882900E05749 /* BookingDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227E8228B882900E05749 /* BookingDetailInteractor.swift */; };
+		7FF227EB228B883200E05749 /* BookingDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227EA228B883200E05749 /* BookingDetailPresenter.swift */; };
+		7FF227EE228B884C00E05749 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227EC228B884C00E05749 /* BookingDetailViewController.swift */; };
+		7FF227EF228B884C00E05749 /* BookingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FF227ED228B884C00E05749 /* BookingDetailViewController.xib */; };
+		7FF227F3228BD0CA00E05749 /* BookingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F2228BD0CA00E05749 /* BookingDetailViewModel.swift */; };
+		7FF227F5228BD80B00E05749 /* GooglePlaceDetailFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F4228BD80B00E05749 /* GooglePlaceDetailFields.swift */; };
+		7FF227F8228BE9AF00E05749 /* InternationalPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F7228BE9AF00E05749 /* InternationalPhoneNumber.swift */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
 		7FF9DE4E22852930009886E7 /* ColumnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE4D22852930009886E7 /* ColumnTests.swift */; };
@@ -77,6 +85,14 @@
 		7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDetailResponse.swift; sourceTree = "<group>"; };
 		7FF227E0228B432400E05749 /* UIApplication+UrlOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UrlOpener.swift"; sourceTree = "<group>"; };
 		7FF227E2228B86F200E05749 /* BookingResultActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingResultActionDelegate.swift; sourceTree = "<group>"; };
+		7FF227E6228B881E00E05749 /* BookingDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailModule.swift; sourceTree = "<group>"; };
+		7FF227E8228B882900E05749 /* BookingDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailInteractor.swift; sourceTree = "<group>"; };
+		7FF227EA228B883200E05749 /* BookingDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailPresenter.swift; sourceTree = "<group>"; };
+		7FF227EC228B884C00E05749 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
+		7FF227ED228B884C00E05749 /* BookingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailViewController.xib; sourceTree = "<group>"; };
+		7FF227F2228BD0CA00E05749 /* BookingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewModel.swift; sourceTree = "<group>"; };
+		7FF227F4228BD80B00E05749 /* GooglePlaceDetailFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceDetailFields.swift; sourceTree = "<group>"; };
+		7FF227F7228BE9AF00E05749 /* InternationalPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalPhoneNumber.swift; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF9DE422285292F009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +144,7 @@
 		7F19C98B22852AA700D21ABB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7FF227F6228BE9A300E05749 /* Models */,
 				7F19C9CC22861DDA00D21ABB /* Config */,
 				7F19C9C4228616E900D21ABB /* Networking */,
 				7F19C98C22852B0B00D21ABB /* Extensions */,
@@ -198,8 +215,38 @@
 				7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */,
 				7F2B4D60228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift */,
 				7F2B4D5E228B3C2D00DBE5CC /* GooglePlacesDetail.swift */,
+				7FF227F4228BD80B00E05749 /* GooglePlaceDetailFields.swift */,
 			);
 			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		7FF227E4228B87B300E05749 /* Booking Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7FF227E5228B881000E05749 /* Module */,
+				7FF227F2228BD0CA00E05749 /* BookingDetailViewModel.swift */,
+			);
+			path = "Booking Detail";
+			sourceTree = "<group>";
+		};
+		7FF227E5228B881000E05749 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7FF227E6228B881E00E05749 /* BookingDetailModule.swift */,
+				7FF227E8228B882900E05749 /* BookingDetailInteractor.swift */,
+				7FF227EA228B883200E05749 /* BookingDetailPresenter.swift */,
+				7FF227EC228B884C00E05749 /* BookingDetailViewController.swift */,
+				7FF227ED228B884C00E05749 /* BookingDetailViewController.xib */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		7FF227F6228BE9A300E05749 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7FF227F7228BE9AF00E05749 /* InternationalPhoneNumber.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7FF9DE2C2285292E009886E7 = {
@@ -228,6 +275,7 @@
 				7F19C98B22852AA700D21ABB /* Core */,
 				7F19C98922852A5E00D21ABB /* Main */,
 				7F19C98A22852A8000D21ABB /* Booking */,
+				7FF227E4228B87B300E05749 /* Booking Detail */,
 			);
 			path = Column;
 			sourceTree = "<group>";
@@ -323,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F286C7C228A4E420093FA3B /* Assets.xcassets in Resources */,
+				7FF227EF228B884C00E05749 /* BookingDetailViewController.xib in Resources */,
 				7F19C9BE2286024F00D21ABB /* BookingResultTableViewCell.xib in Resources */,
 				7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */,
 				7F19C9A72285324700D21ABB /* BookingViewController.xib in Resources */,
@@ -345,21 +394,28 @@
 			files = (
 				7FF227E1228B432400E05749 /* UIApplication+UrlOpener.swift in Sources */,
 				7F286C7E228A4F3F0093FA3B /* NSAttributedString+Image.swift in Sources */,
+				7FF227F5228BD80B00E05749 /* GooglePlaceDetailFields.swift in Sources */,
 				7F19C9A62285324700D21ABB /* BookingViewController.swift in Sources */,
+				7FF227E7228B881E00E05749 /* BookingDetailModule.swift in Sources */,
 				7F19C9DF22866AC100D21ABB /* GooglePlacesSearchResponse.swift in Sources */,
 				7F2B4D5B228B24CD00DBE5CC /* Array+Appending.swift in Sources */,
 				7F19C9B32285EBDD00D21ABB /* UIView+Constrain.swift in Sources */,
+				7FF227F8228BE9AF00E05749 /* InternationalPhoneNumber.swift in Sources */,
 				7F19C9C022860BA500D21ABB /* BookingTableViewDatasource.swift in Sources */,
 				7F19C9DA2286296F00D21ABB /* GooglePlaceTypes.swift in Sources */,
 				7F2B4D5D228B26B600DBE5CC /* GooglePlacesEndpoint.swift in Sources */,
 				7F19C9BD2286024F00D21ABB /* BookingResultTableViewCell.swift in Sources */,
 				7F19C9C6228616FC00D21ABB /* Webservice.swift in Sources */,
 				7F2B4D61228B3CB400DBE5CC /* GooglePlacesDetailResponse.swift in Sources */,
+				7FF227EE228B884C00E05749 /* BookingDetailViewController.swift in Sources */,
+				7FF227E9228B882900E05749 /* BookingDetailInteractor.swift in Sources */,
 				7F2B4D5F228B3C2D00DBE5CC /* GooglePlacesDetail.swift in Sources */,
 				7F19C99322852C2000D21ABB /* BookingModule.swift in Sources */,
+				7FF227EB228B883200E05749 /* BookingDetailPresenter.swift in Sources */,
 				7F19C9D82286253400D21ABB /* GooglePlacesSearchResult.swift in Sources */,
 				7FF227E3228B86F200E05749 /* BookingResultActionDelegate.swift in Sources */,
 				7F2B4D59228B1B3F00DBE5CC /* Endpoint.swift in Sources */,
+				7FF227F3228BD0CA00E05749 /* BookingDetailViewModel.swift in Sources */,
 				7F19C99722852C3500D21ABB /* BookingPresenter.swift in Sources */,
 				7F19C9D12286227800D21ABB /* GooglePlacesService.swift in Sources */,
 				7F286C7A228A3E690093FA3B /* BookingResultViewModel.swift in Sources */,

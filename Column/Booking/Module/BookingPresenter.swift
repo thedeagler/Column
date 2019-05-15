@@ -23,7 +23,6 @@ class BookingPresenter {
         }
 
         let places: [BookingResultViewModel] = results.map {
-            let title = NSMutableAttributedString()
             var titleIcon: UIImage?
             if let type = $0.types.first {
                 switch type {
@@ -31,9 +30,7 @@ class BookingPresenter {
                 case .hotel: titleIcon = #imageLiteral(resourceName: "hotel-filled")
                 }
             }
-            title.append(NSAttributedString(string: $0.name))
-
-
+            let title = NSAttributedString(string: $0.name)
             let description = NSAttributedString(string: $0.address)
             return BookingResultViewModel.init(id: $0.placeId, title: title, titleIcon: titleIcon, description: description)
         }
@@ -46,15 +43,13 @@ class BookingPresenter {
     }
 
     func prepare(internationalNumber: String?, for placeId: String) {
-        guard let number = internationalNumber,
-            let url = URL(string: "tel://\(number.replacingOccurrences(of: " ", with: ""))") else {
-
+        guard let number = internationalNumber else {
             view?.disableCalling(for: placeId)
             presentAlert(title: "Whoops", message: "This location does not have a valid phone number. Please try another location.")
             return
         }
 
-        view?.call(url: url)
+        view?.call(phoneNumber: InternationalPhoneNumber(phoneNumber: number))
     }
 
     func presentAlert(title: String? = nil, message: String) {
