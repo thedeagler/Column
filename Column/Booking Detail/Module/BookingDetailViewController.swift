@@ -32,6 +32,8 @@ class BookingDetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        loadingView.isHidden = false
+        
         interactor.getInitialData()
 
         headerContainer.layer.masksToBounds = false
@@ -42,6 +44,7 @@ class BookingDetailViewController: UIViewController {
 
         callButton.layer.masksToBounds = true
         callButton.layer.cornerRadius = 6
+        callButton.imageEdgeInsets.right = 16
     }
 
     @IBAction func didTapCall(_ sender: UIButton) {

@@ -28,14 +28,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1J-NY-rof">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1J-NY-rof">
                     <rect key="frame" x="16" y="802" width="382" height="44"/>
                     <color key="backgroundColor" red="0.29147374349999999" green="0.78684513140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="yhx-Yh-tVU"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <state key="normal" title="Call 'em">
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Call 'em" image="phone-icon-filled">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -165,5 +165,6 @@
     <resources>
         <image name="close-x-filled" width="30" height="30"/>
         <image name="hotel-filled" width="33" height="33"/>
+        <image name="phone-icon-filled" width="33" height="33"/>
     </resources>
 </document>
