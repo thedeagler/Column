@@ -1,6 +1,5 @@
 # Column
 *Call 'em*
-----
 
 Column is a phone directory app using [Google Places API](https://developers.google.com/places/web-service/intro) to search, get details for, and ultimately, call, places. Although the app focuses on hotels and car rental agencies, other places and even addresses are searchable.
 
