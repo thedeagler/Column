@@ -24,7 +24,6 @@
 		7F19C9DA2286296F00D21ABB /* GooglePlaceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */; };
 		7F19C9DF22866AC100D21ABB /* GooglePlacesSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */; };
 		7F286C7A228A3E690093FA3B /* BookingResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F286C79228A3E690093FA3B /* BookingResultViewModel.swift */; };
-		7F286C7C228A4E420093FA3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F286C7B228A4E420093FA3B /* Assets.xcassets */; };
 		7F286C7E228A4F3F0093FA3B /* NSAttributedString+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */; };
 		7F2B4D59228B1B3F00DBE5CC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D58228B1B3F00DBE5CC /* Endpoint.swift */; };
 		7F2B4D5B228B24CD00DBE5CC /* Array+Appending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B4D5A228B24CD00DBE5CC /* Array+Appending.swift */; };
@@ -41,6 +40,7 @@
 		7FF227F3228BD0CA00E05749 /* BookingDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F2228BD0CA00E05749 /* BookingDetailViewModel.swift */; };
 		7FF227F5228BD80B00E05749 /* GooglePlaceDetailFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F4228BD80B00E05749 /* GooglePlaceDetailFields.swift */; };
 		7FF227F8228BE9AF00E05749 /* InternationalPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF227F7228BE9AF00E05749 /* InternationalPhoneNumber.swift */; };
+		7FF227FA228C013000E05749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FF227F9228C013000E05749 /* Assets.xcassets */; };
 		7FF9DE392285292E009886E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE382285292E009886E7 /* AppDelegate.swift */; };
 		7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF9DE412285292F009886E7 /* LaunchScreen.storyboard */; };
 		7FF9DE4E22852930009886E7 /* ColumnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9DE4D22852930009886E7 /* ColumnTests.swift */; };
@@ -76,7 +76,6 @@
 		7F19C9D92286296F00D21ABB /* GooglePlaceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceTypes.swift; sourceTree = "<group>"; };
 		7F19C9DE22866AC100D21ABB /* GooglePlacesSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesSearchResponse.swift; sourceTree = "<group>"; };
 		7F286C79228A3E690093FA3B /* BookingResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingResultViewModel.swift; sourceTree = "<group>"; };
-		7F286C7B228A4E420093FA3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F286C7D228A4F3F0093FA3B /* NSAttributedString+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Image.swift"; sourceTree = "<group>"; };
 		7F2B4D58228B1B3F00DBE5CC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7F2B4D5A228B24CD00DBE5CC /* Array+Appending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Appending.swift"; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		7FF227F2228BD0CA00E05749 /* BookingDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewModel.swift; sourceTree = "<group>"; };
 		7FF227F4228BD80B00E05749 /* GooglePlaceDetailFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceDetailFields.swift; sourceTree = "<group>"; };
 		7FF227F7228BE9AF00E05749 /* InternationalPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalPhoneNumber.swift; sourceTree = "<group>"; };
+		7FF227F9228C013000E05749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FF9DE352285292E009886E7 /* Column.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Column.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF9DE382285292E009886E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF9DE422285292F009886E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF9DE442285292F009886E7 /* Info.plist */,
-				7F286C7B228A4E420093FA3B /* Assets.xcassets */,
+				7FF227F9228C013000E05749 /* Assets.xcassets */,
 				7F19C98B22852AA700D21ABB /* Core */,
 				7F19C98922852A5E00D21ABB /* Main */,
 				7F19C98A22852A8000D21ABB /* Booking */,
@@ -370,11 +370,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F286C7C228A4E420093FA3B /* Assets.xcassets in Resources */,
 				7FF227EF228B884C00E05749 /* BookingDetailViewController.xib in Resources */,
 				7F19C9BE2286024F00D21ABB /* BookingResultTableViewCell.xib in Resources */,
 				7FF9DE432285292F009886E7 /* LaunchScreen.storyboard in Resources */,
 				7F19C9A72285324700D21ABB /* BookingViewController.xib in Resources */,
+				7FF227FA228C013000E05749 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +15,52 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-28-YB7">
+                                <rect key="frame" x="143" y="364.5" width="128" height="177.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call 'em" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhb-ps-twd">
+                                        <rect key="frame" x="0.0" y="144" width="128" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" red="0.2901960784" green="0.78823529410000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="column-outline" translatesAutoresizingMaskIntoConstraints="NO" id="cYO-HA-vNO">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cYO-HA-vNO" secondAttribute="height" multiplier="1:1" id="hbf-oz-q0T"/>
+                                            <constraint firstAttribute="height" constant="128" id="urE-Qi-fMF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cYO-HA-vNO" firstAttribute="top" secondItem="rWH-28-YB7" secondAttribute="top" id="4fK-fz-Cl8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xhb-ps-twd" secondAttribute="bottom" id="7iM-50-XrV"/>
+                                    <constraint firstItem="cYO-HA-vNO" firstAttribute="width" secondItem="rWH-28-YB7" secondAttribute="width" id="UET-K0-IE2"/>
+                                    <constraint firstItem="Xhb-ps-twd" firstAttribute="centerX" secondItem="rWH-28-YB7" secondAttribute="centerX" id="VKv-Kj-QaM"/>
+                                    <constraint firstItem="cYO-HA-vNO" firstAttribute="centerX" secondItem="rWH-28-YB7" secondAttribute="centerX" id="iAh-uc-fLV"/>
+                                    <constraint firstItem="Xhb-ps-twd" firstAttribute="width" secondItem="rWH-28-YB7" secondAttribute="width" id="qH9-zw-0d2"/>
+                                    <constraint firstItem="Xhb-ps-twd" firstAttribute="top" secondItem="cYO-HA-vNO" secondAttribute="bottom" constant="16" id="v57-Gp-kCs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rWH-28-YB7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8Br-rE-Z6n"/>
+                            <constraint firstItem="rWH-28-YB7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L1x-Th-WTF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="column-outline" width="33" height="33"/>
+    </resources>
 </document>

@@ -122,7 +122,7 @@
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HzJ-I6-ISY">
                             <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            <color key="color" red="0.29147374349999999" green="0.78684513140000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="color" red="0.29019607843137252" green="0.78823529411764703" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

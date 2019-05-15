@@ -75,7 +75,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kq-bc-ujW">
-                    <rect key="frame" x="0.0" y="172" width="414" height="690"/>
+                    <rect key="frame" x="0.0" y="172" width="414" height="724"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching for a business such as &quot;Hyatt,&quot; or &quot;Thrifty.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-1N-GBc">
                             <rect key="frame" x="32" y="24" width="350" height="41"/>
@@ -94,19 +94,19 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="8kq-bc-ujW" firstAttribute="centerY" secondItem="hWN-Bi-GuW" secondAttribute="centerY" id="1qg-GG-XJb"/>
                 <constraint firstItem="RnN-Kr-YqC" firstAttribute="trailing" secondItem="AaA-96-sz1" secondAttribute="trailing" id="2Fe-Et-9TK"/>
                 <constraint firstItem="AaA-96-sz1" firstAttribute="leading" secondItem="RnN-Kr-YqC" secondAttribute="leading" id="5W9-wq-XQc"/>
                 <constraint firstItem="8kq-bc-ujW" firstAttribute="width" secondItem="hWN-Bi-GuW" secondAttribute="width" id="GIv-G4-q51"/>
                 <constraint firstItem="HFh-Me-mt9" firstAttribute="height" secondItem="hWN-Bi-GuW" secondAttribute="height" id="Gha-wA-uiZ"/>
                 <constraint firstItem="8kq-bc-ujW" firstAttribute="centerX" secondItem="hWN-Bi-GuW" secondAttribute="centerX" id="KbN-P7-wBf"/>
-                <constraint firstItem="8kq-bc-ujW" firstAttribute="height" secondItem="hWN-Bi-GuW" secondAttribute="height" id="Njp-cB-KzY"/>
                 <constraint firstItem="hWN-Bi-GuW" firstAttribute="top" secondItem="RnN-Kr-YqC" secondAttribute="bottom" id="Oyd-lP-lzg"/>
                 <constraint firstItem="HFh-Me-mt9" firstAttribute="width" secondItem="hWN-Bi-GuW" secondAttribute="width" id="P7S-gY-NFj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="AaA-96-sz1" secondAttribute="bottom" id="Sp1-h3-Gx5"/>
+                <constraint firstItem="8kq-bc-ujW" firstAttribute="top" secondItem="hWN-Bi-GuW" secondAttribute="top" id="V8K-qJ-irs"/>
                 <constraint firstItem="RnN-Kr-YqC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="bB9-IF-ObO"/>
                 <constraint firstItem="hWN-Bi-GuW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="brr-Ke-0hL"/>
                 <constraint firstItem="HFh-Me-mt9" firstAttribute="centerY" secondItem="hWN-Bi-GuW" secondAttribute="centerY" id="fX8-9T-bFq"/>
+                <constraint firstAttribute="bottom" secondItem="8kq-bc-ujW" secondAttribute="bottom" id="gcv-BN-SYj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hWN-Bi-GuW" secondAttribute="trailing" id="joj-WI-wAY"/>
                 <constraint firstAttribute="top" secondItem="RnN-Kr-YqC" secondAttribute="top" id="lFL-WI-1Qo"/>
                 <constraint firstItem="RnN-Kr-YqC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="m1D-IS-MH3"/>
